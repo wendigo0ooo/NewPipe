@@ -39,8 +39,8 @@ configure<ApplicationExtension> {
     namespace = NEWPIPE_APPLICATION_ID_OLD
 
     defaultConfig {
-        applicationId = NEWPIPE_APPLICATION_ID_OLD
-        resValue("string", "app_name", "NewPipe")
+        applicationId = "com.wendigo0ooo.newpipe"
+        resValue("string", "app_name", "YouTube")
         minSdk {
             version = release(NEWPIPE_VERSION_SDK_MIN)
         }
@@ -63,7 +63,7 @@ configure<ApplicationExtension> {
             // suffix the app id and the app name with git branch name
             if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
                 applicationIdSuffix = ".debug"
-                resValue("string", "app_name", "NewPipe Debug")
+                resValue("string", "app_name", "YouTube")
             } else {
                 applicationIdSuffix = ".debug.$normalizedWorkingBranch"
                 resValue("string", "app_name", "NewPipe $workingBranch")
@@ -91,7 +91,7 @@ configure<ApplicationExtension> {
             // suffix the app id and the app name with git branch name
             if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
                 applicationIdSuffix = ".continuous"
-                resValue("string", "app_name", "NewPipe Continuous")
+                resValue("string", "app_name", "YouTube")
             } else {
                 applicationIdSuffix = ".continuous.$normalizedWorkingBranch"
                 resValue("string", "app_name", "NewPipe $workingBranch")
